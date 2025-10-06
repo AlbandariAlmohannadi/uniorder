@@ -1,0 +1,19 @@
+/* Add this to disable problematic effects during recording */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    backdrop-filter: none !important;
+  }
+}
+
+/* Alternative: Add this class to body when recording */
+.recording-mode * {
+  backdrop-filter: none !important;
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+}

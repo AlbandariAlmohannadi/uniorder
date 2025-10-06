@@ -1,0 +1,70 @@
+{
+  "app": {
+    "name": "يونيأوردر",
+    "version": "الإصدار 1.0.0"
+  },
+  "auth": {
+    "welcome": "مرحباً بك في يونيأوردر",
+    "signIn": "تسجيل الدخول إلى لوحة تحكم المطعم",
+    "username": "اسم المستخدم أو البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "signInButton": "تسجيل الدخول",
+    "signingIn": "جاري تسجيل الدخول...",
+    "logout": "تسجيل الخروج",
+    "loginSuccess": "تم تسجيل الدخول بنجاح",
+    "invalidCredentials": "بيانات اعتماد غير صحيحة"
+  },
+  "navigation": {
+    "dashboard": "لوحة التحكم",
+    "menu": "القائمة",
+    "managerDashboard": "لوحة المدير",
+    "reports": "التقارير",
+    "users": "المستخدمون",
+    "integrations": "التكاملات",
+    "settings": "الإعدادات"
+  },
+  "dashboard": {
+    "welcomeBack": "مرحباً بعودتك، {{username}}!",
+    "manageOrders": "إدارة طلبات المطعم في الوقت الفعلي",
+    "newOrders": "طلبات جديدة",
+    "preparing": "قيد التحضير",
+    "completed": "مكتملة",
+    "cancelled": "ملغية",
+    "recentOrders": "الطلبات الأخيرة",
+    "ordersFound": "تم العثور على {{count}} طلب"
+  },
+  "orders": {
+    "accept": "قبول",
+    "reject": "رفض",
+    "ready": "جاهز",
+    "complete": "إكمال",
+    "items": "العناصر ({{count}})",
+    "note": "ملاحظة: {{note}}",
+    "statusUpdated": "تم تحديث حالة الطلب إلى {{status}}",
+    "updateFailed": "فشل في تحديث حالة الطلب"
+  },
+  "connection": {
+    "connected": "متصل",
+    "disconnected": "غير متصل"
+  },
+  "menu": {
+    "name": "الاسم",
+    "description": "الوصف",
+    "price": "السعر",
+    "category": "الفئة",
+    "available": "متاح",
+    "unavailable": "غير متاح"
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "add": "إضافة",
+    "search": "بحث",
+    "filter": "تصفية",
+    "total": "المجموع",
+    "unknown": "غير معروف"
+  }
+}

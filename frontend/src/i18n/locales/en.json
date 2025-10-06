@@ -1,0 +1,70 @@
+{
+  "app": {
+    "name": "UniOrder",
+    "version": "v1.0.0"
+  },
+  "auth": {
+    "welcome": "Welcome to UniOrder",
+    "signIn": "Sign in to your restaurant dashboard",
+    "username": "Username or Email",
+    "password": "Password",
+    "signInButton": "Sign in",
+    "signingIn": "Signing in...",
+    "logout": "Logout",
+    "loginSuccess": "Login successful",
+    "invalidCredentials": "Invalid credentials"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "menu": "Menu",
+    "managerDashboard": "Manager Dashboard",
+    "reports": "Reports",
+    "users": "Users",
+    "integrations": "Integrations",
+    "settings": "Settings"
+  },
+  "dashboard": {
+    "welcomeBack": "Welcome back, {{username}}!",
+    "manageOrders": "Manage your restaurant orders in real-time",
+    "newOrders": "New Orders",
+    "preparing": "Preparing",
+    "completed": "Completed",
+    "cancelled": "Cancelled",
+    "recentOrders": "Recent Orders",
+    "ordersFound": "{{count}} orders found"
+  },
+  "orders": {
+    "accept": "Accept",
+    "reject": "Reject",
+    "ready": "Ready",
+    "complete": "Complete",
+    "items": "Items ({{count}})",
+    "note": "Note: {{note}}",
+    "statusUpdated": "Order status updated to {{status}}",
+    "updateFailed": "Failed to update order status"
+  },
+  "connection": {
+    "connected": "Connected",
+    "disconnected": "Disconnected"
+  },
+  "menu": {
+    "name": "Name",
+    "description": "Description",
+    "price": "Price",
+    "category": "Category",
+    "available": "Available",
+    "unavailable": "Unavailable"
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "search": "Search",
+    "filter": "Filter",
+    "total": "Total",
+    "unknown": "Unknown"
+  }
+}
