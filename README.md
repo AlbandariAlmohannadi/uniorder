@@ -27,7 +27,7 @@ A comprehensive order management middleware that consolidates orders from multip
 ### Installation
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/uniorder.git
+git clone https://github.com/AlbandariAlmohannadi/uniorder.git
 cd uniorder
 
 # Install backend dependencies

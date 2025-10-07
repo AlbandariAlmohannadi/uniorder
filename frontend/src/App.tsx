@@ -24,7 +24,7 @@ function App() {
     <AuthProvider>
       <SocketProvider>
         <OrderProvider>
-          <Router>
+          <Router basename="/uniorder">
             <div className="min-h-screen bg-gray-50">
               <Routes>
                 {/* Public Routes */}
