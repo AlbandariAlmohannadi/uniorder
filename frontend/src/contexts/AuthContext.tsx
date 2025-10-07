@@ -101,6 +101,37 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     try {
       dispatch({ type: 'LOGIN_START' })
       
+      // Demo mode for GitHub Pages
+      const isDemoMode = import.meta.env.VITE_DEMO_MODE === 'true' || import.meta.env.VITE_API_URL === 'demo'
+      
+      if (isDemoMode) {
+        // Demo credentials
+        const demoUsers = {
+          'admin': { id: 1, username: 'admin', email: 'admin@demo.com', role: 'admin' as const },
+          'manager1': { id: 2, username: 'manager1', email: 'manager@demo.com', role: 'manager' as const },
+          'employee1': { id: 3, username: 'employee1', email: 'employee@demo.com', role: 'employee' as const }
+        }
+        
+        const demoUser = demoUsers[username as keyof typeof demoUsers]
+        
+        if (demoUser && password === 'password123') {
+          dispatch({
+            type: 'LOGIN_SUCCESS',
+            payload: {
+              user: demoUser,
+              token: 'demo-token-' + username,
+            },
+          })
+          toast.success('Demo login successful!')
+          return true
+        } else {
+          dispatch({ type: 'LOGIN_FAILURE' })
+          toast.error('Demo credentials: admin/manager1/employee1 with password123')
+          return false
+        }
+      }
+      
+      // Regular API login
       const response = await authAPI.login(username, password)
       
       if (response.success) {
@@ -148,6 +179,29 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     if (!state.token) {
       dispatch({ type: 'SET_LOADING', payload: false })
       return
+    }
+
+    // Demo mode - skip auth check
+    const isDemoMode = import.meta.env.VITE_DEMO_MODE === 'true' || import.meta.env.VITE_API_URL === 'demo'
+    if (isDemoMode && state.token?.startsWith('demo-token-')) {
+      const username = state.token.replace('demo-token-', '')
+      const demoUsers = {
+        'admin': { id: 1, username: 'admin', email: 'admin@demo.com', role: 'admin' as const },
+        'manager1': { id: 2, username: 'manager1', email: 'manager@demo.com', role: 'manager' as const },
+        'employee1': { id: 3, username: 'employee1', email: 'employee@demo.com', role: 'employee' as const }
+      }
+      
+      const demoUser = demoUsers[username as keyof typeof demoUsers]
+      if (demoUser) {
+        dispatch({
+          type: 'LOGIN_SUCCESS',
+          payload: {
+            user: demoUser,
+            token: state.token,
+          },
+        })
+        return
+      }
     }
 
     try {
